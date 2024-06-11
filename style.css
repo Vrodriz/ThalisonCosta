@@ -3,59 +3,77 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
 }
-.container {
+
+h2 {
     text-align: center;
+    margin: 20px 0;
+}
+
+.img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.img-logo {
+    max-width: 50%;
+    height: auto;
+}
+
+form {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
 }
-.container h2 {
-    margin-bottom: 20px;
-}
-.container .img {
-    margin-bottom: 20px;
-}
-.container .img img {
-    max-width: 100%;
-    height: auto;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 form div {
-    width: 100%;
     margin-bottom: 15px;
 }
-form label {
+
+label {
     display: block;
     margin-bottom: 5px;
+    font-weight: bold;
 }
-form input, form select, form textarea, form button {
+
+input, select, textarea, button {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
 }
-form button {
+
+button {
     background-color: #28a745;
-    color: white;
+    color: #fff;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
-form button:hover {
+
+button:hover {
     background-color: #218838;
 }
 
-.img-logo{  
-    max-width: 800px;
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    input, select, textarea, button {
+        padding: 8px;
+    }
+
+    label {
+        margin-bottom: 3px;
+    }
 }
